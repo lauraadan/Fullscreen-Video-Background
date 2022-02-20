@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="fonts/Poppins-Light.ttf">
+	<meta name="author" content="Laura Adán">
+	<meta name="revised" content="Abril 2021">
+	<title>14_ Fullscreen Video Background Fadeout on Scroll</title>
+</head>
+<body>
+
+	<section>
+		<video class="video" src="video/video.mp4" autoplay="" muted="" loop=""></video>
+
+		<div class="menu">
+				<ul> 
+			<li data-text="Inicio"><a href="#">Inicio</a></li>
+			<li data-text="Más"><a href="#"> Más...</a></li>
+			<li data-text="Servicios"><a href="#">Servicios</a></li>
+			<li data-text="Porfolio"><a href="#"> Porfolio</a></li>
+			<li data-text="Equipo"><a href="#"> Equipo</a></li>
+			<li data-text="Contacto"><a href="#">Contacto</a></li>
+			</ul>
+		</div>
+	</section>
+
+	<div class="videos">
+
+		<video src="video/01.mp4" autoplay="" muted="" loop=""></video>
+		<video src="video/02.mp4" autoplay="" muted="" loop=""></video>
+		<video src="video/03.mp4" autoplay="" muted="" loop=""></video>
+	</div>
+
+	<section>
+		<div class="contenido">
+			<h2> Acerca de YuMagic </h2>
+			<p> Productora cinematográfica audiovisual Barcelona especializada en la producción y postproducción de todo tipo de vídeos para particulares y empresas. <br>
+			Descubre lo que yuMagic puede hacer por ti</p>
+			<br>
+			<h2> Información de contacto </h2>
+			<p> T +34 935 34 89 42
+			info@yumagic.com</p>
+		</div>
+	</section>
+
+	<script type="text/javascript">
+		let video = document.querySelector('video');
+		window.addEventListener('scroll' , function(){ 
+				let value = 1 + window.scrollY/ -600;
+				video.style.opacity = value
+
+			})
+
+	</script>
+	
+</body>
+</html>
